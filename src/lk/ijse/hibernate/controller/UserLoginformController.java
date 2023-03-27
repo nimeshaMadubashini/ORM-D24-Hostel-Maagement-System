@@ -5,6 +5,7 @@ package lk.ijse.hibernate.controller;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
     public class UserLoginformController {
@@ -19,7 +20,13 @@ import javafx.scene.layout.AnchorPane;
         private JFXTextField password;
 
         @FXML
-        void changePasswordOnAction(ActionEvent event) {
+        private Label lblusername;
+
+        @FXML
+        private Label lblPassword;
+
+        @FXML
+        void SignUpOnAction(ActionEvent event) {
 
         }
 
