@@ -1,4 +1,4 @@
-package lk.ijse.hibernate.utill;
+package lk.ijse.hibernate.utill.session;
 
 import java.io.IOException;
 import java.util.Properties;

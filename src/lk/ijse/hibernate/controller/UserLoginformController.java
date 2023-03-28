@@ -5,10 +5,11 @@ package lk.ijse.hibernate.controller;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
-import lk.ijse.hibernate.utill.Navigation;
-import lk.ijse.hibernate.utill.Routes;
+import lk.ijse.hibernate.utill.nave.Navigation;
+import lk.ijse.hibernate.utill.nave.Routes;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -32,7 +33,8 @@ public class UserLoginformController {
 
         @FXML
         void SignUpOnAction(ActionEvent event) throws IOException, InvocationTargetException {
-                Navigation.navigate(Routes.SignUp, pane);
+
+                Navigation.navigation(Routes.SIGNUP,pane);
         }
 
         @FXML

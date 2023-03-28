@@ -2,7 +2,7 @@ package lk.ijse.hibernate.dao.custome.impl;
 
 import lk.ijse.hibernate.dao.custome.UserDAO;
 import lk.ijse.hibernate.entity.User;
-import lk.ijse.hibernate.utill.SessionFactoryConfig;
+import lk.ijse.hibernate.utill.session.SessionFactoryConfig;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 

@@ -13,7 +13,7 @@ launch(args);
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        URL resource = this.getClass().getResource("/lk/ijse/hibernate/view/SignUpForm.fxml");
+        URL resource = this.getClass().getResource("/lk/ijse/hibernate/view/UserLoginform.fxml");
         Parent load = FXMLLoader.load(resource);
         Scene scene=new Scene(load);
         primaryStage.setScene(scene);

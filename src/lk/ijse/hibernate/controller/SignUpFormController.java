@@ -9,10 +9,8 @@ import javafx.scene.layout.AnchorPane;
 import lk.ijse.hibernate.bo.BOFactory;
 import lk.ijse.hibernate.bo.custome.UserBO;
 import lk.ijse.hibernate.dto.UserDto;
-import lk.ijse.hibernate.utill.Navigation;
-import lk.ijse.hibernate.utill.Routes;
-
-import java.io.IOException;
+import lk.ijse.hibernate.utill.nave.Navigation;
+import lk.ijse.hibernate.utill.nave.Routes;
 
 public class SignUpFormController {
 
@@ -51,8 +49,7 @@ UserBO userBO= (UserBO) BOFactory.getBoFactory().getBO(BOFactory.BOType.UserSign
         String password=txtpassword.getText();
         try {
             boolean isSave= userBO.saveUser(new UserDto(nic,name,userName,password));
-            pane.getChildren().clear();
-            pane.getChildren().add(FXMLLoader.load(getClass().getResource("/lk/ijse/hibernate/view/UserLoginform.fxml")));
+            Navigation.navigation(Routes.SIGNING,pane);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

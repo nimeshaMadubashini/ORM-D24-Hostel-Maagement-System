@@ -1,4 +1,4 @@
-package lk.ijse.hibernate.utill;
+package lk.ijse.hibernate.utill.session;
 
 import lk.ijse.hibernate.entity.User;
 import org.hibernate.Session;
