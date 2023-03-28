@@ -9,8 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane fx:id="pane" prefHeight="532.0" prefWidth="682.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.view.SignUpFormController">
+<AnchorPane fx:id="pane" prefHeight="532.0" prefWidth="682.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.controller.SignUpFormController">
    <children>
       <Text fill="#321268" layoutX="97.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome To D24 Hostel" textAlignment="RIGHT" wrappingWidth="321.13671875">
          <font>
@@ -36,7 +35,7 @@
       <JFXTextField fx:id="txtName" layoutX="434.0" layoutY="222.0" prefHeight="25.0" prefWidth="224.0" promptText="NIC" text="Name" />
       <JFXTextField fx:id="txtUserName" layoutX="434.0" layoutY="303.0" prefHeight="25.0" prefWidth="224.0" promptText="NIC" text="User Name" />
       <JFXTextField fx:id="txtpassword" layoutX="434.0" layoutY="378.0" prefHeight="25.0" prefWidth="224.0" promptText="NIC" text="Password" />
-      <Button layoutX="434.0" layoutY="449.0" mnemonicParsing="false" onAction="#SignUpOnAction" prefHeight="31.0" prefWidth="185.0" style="-fx-background-radius: 20; -fx-background-color: #5DADE2;" text="Sign Up" textFill="#fcfcfc">
+      <Button layoutX="434.0" layoutY="449.0" mnemonicParsing="false" onAction="#SignUPOnAction" prefHeight="31.0" prefWidth="185.0" style="-fx-background-radius: 20; -fx-background-color: #5DADE2;" text="Sign Up" textFill="#fcfcfc">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>

@@ -3,10 +3,19 @@ package lk.ijse.hibernate.controller;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import lk.ijse.hibernate.bo.BOFactory;
+import lk.ijse.hibernate.bo.custome.UserBO;
+import lk.ijse.hibernate.dto.UserDto;
+import lk.ijse.hibernate.utill.Navigation;
+import lk.ijse.hibernate.utill.Routes;
+
+import java.io.IOException;
 
 public class SignUpFormController {
+
     @FXML
     private AnchorPane pane;
 
@@ -33,10 +42,20 @@ public class SignUpFormController {
 
     @FXML
     private Label lblPassword;
-
+UserBO userBO= (UserBO) BOFactory.getBoFactory().getBO(BOFactory.BOType.UserSignUp);
     @FXML
-    void SignUpOnAction(ActionEvent event) {
-
+    void SignUPOnAction(ActionEvent event) {
+        String nic=txtNic.getText();
+        String name=txtName.getText();
+        String userName=txtUserName.getText();
+        String password=txtpassword.getText();
+        try {
+            boolean isSave= userBO.saveUser(new UserDto(nic,name,userName,password));
+            pane.getChildren().clear();
+            pane.getChildren().add(FXMLLoader.load(getClass().getResource("/lk/ijse/hibernate/view/UserLoginform.fxml")));
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }

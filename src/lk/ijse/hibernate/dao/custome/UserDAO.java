@@ -1,4 +1,4 @@
-package lk.ijse.hibernate.dao.custome.impl;
+package lk.ijse.hibernate.dao.custome;
 
 import lk.ijse.hibernate.dao.CrudDao;
 import lk.ijse.hibernate.entity.User;
